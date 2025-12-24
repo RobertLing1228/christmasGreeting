@@ -176,10 +176,10 @@ const formatDate = (dateStr) => {
 
 .dialog-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
   font-weight: 900;
   color: #e8a87c;
-  text-align: center;
+  text-align: left;
   margin: 0;
   line-height: 1.3;
 }
@@ -281,6 +281,12 @@ const formatDate = (dateStr) => {
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .dialog-title {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+  }
+}
+
 @media (max-width: 480px) {
   .dialog-content {
     max-width: 95%;
@@ -288,7 +294,11 @@ const formatDate = (dateStr) => {
   }
 
   .dialog-header {
-    padding: 1.5rem 1.5rem 0.75rem;
+    padding: 1.5rem 1rem 0.75rem;
+  }
+
+  .dialog-title {
+    font-size: clamp(0.9rem, 2.8vw, 1.1rem);
   }
 
   .dialog-body {

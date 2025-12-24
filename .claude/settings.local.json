@@ -8,7 +8,12 @@
       "Bash(npm run dev:*)",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Interactive Christmas Greeting Website 2025\n\nFeatures:\n- Spline 3D Christmas scene with drag-to-rotate interaction\n- Animated \"Merry Christmas 2025\" greeting with character animations\n- Interactive falling snow effect with gather/scatter on click/touch\n- Random greeting messages (20 variants) with elegant fade animations\n- Music player with playlist support and auto-advance\n- Present button with personalized message dialog\n- Warm glowing stars and white twinkling stars background\n- Gradient sky-to-floor background effect\n- Fully responsive design for mobile and desktop\n- Deployed on Vercel\n\nTech Stack:\n- Vue 3 (Composition API)\n- Vite 5\n- @splinetool/runtime for 3D scene\n- Pure CSS animations\n- HTML5 Audio API\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

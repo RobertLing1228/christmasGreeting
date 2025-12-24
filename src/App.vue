@@ -176,85 +176,86 @@ const onSplineLoaded = () => {
 }
 
 .warm-stars-glow {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: rgba(255, 215, 100, 1);
+  background: rgba(255, 200, 80, 1);
   position: absolute;
   top: 50px;
-  left: 100px;
+  left: 50px;
   box-shadow:
-    /* Row 1 - Top scattered stars */
-    50px 20px 0 8px rgba(255, 215, 100, 1),
-    50px 20px 0 16px rgba(255, 215, 100, 0.6),
-    50px 20px 0 24px rgba(255, 215, 100, 0.2),
+    /* Row 1 - Top scattered left to right */
+    100px 30px 0 10px rgba(255, 200, 80, 1),
+    100px 30px 0 20px rgba(255, 200, 80, 0.7),
+    100px 30px 0 30px rgba(255, 200, 80, 0.3),
 
-    250px 40px 0 7px rgba(249, 214, 127, 0.95),
-    250px 40px 0 14px rgba(249, 214, 127, 0.5),
-    250px 40px 0 21px rgba(249, 214, 127, 0.15),
+    320px 45px 0 9px rgba(255, 180, 90, 1),
+    320px 45px 0 18px rgba(255, 180, 90, 0.65),
+    320px 45px 0 27px rgba(255, 180, 90, 0.25),
 
-    480px 30px 0 9px rgba(244, 192, 122, 1),
-    480px 30px 0 18px rgba(244, 192, 122, 0.6),
-    480px 30px 0 27px rgba(244, 192, 122, 0.2),
+    540px 35px 0 11px rgba(255, 215, 100, 1),
+    540px 35px 0 22px rgba(255, 215, 100, 0.7),
+    540px 35px 0 33px rgba(255, 215, 100, 0.3),
 
-    720px 50px 0 7px rgba(232, 168, 124, 0.95),
-    720px 50px 0 14px rgba(232, 168, 124, 0.5),
+    780px 50px 0 9px rgba(255, 190, 85, 1),
+    780px 50px 0 18px rgba(255, 190, 85, 0.65),
+    780px 50px 0 27px rgba(255, 190, 85, 0.25),
 
-    920px 25px 0 8px rgba(255, 215, 100, 1),
-    920px 25px 0 16px rgba(255, 215, 100, 0.6),
-    920px 25px 0 24px rgba(255, 215, 100, 0.2),
+    1000px 40px 0 10px rgba(255, 200, 80, 1),
+    1000px 40px 0 20px rgba(255, 200, 80, 0.7),
+    1000px 40px 0 30px rgba(255, 200, 80, 0.3),
+
+    1220px 28px 0 9px rgba(255, 180, 90, 1),
+    1220px 28px 0 18px rgba(255, 180, 90, 0.65),
 
     /* Row 2 - Mid-top scattered */
-    120px 90px 0 7px rgba(249, 214, 127, 0.9),
-    120px 90px 0 14px rgba(249, 214, 127, 0.5),
-    120px 90px 0 21px rgba(249, 214, 127, 0.15),
+    60px 100px 0 9px rgba(255, 215, 100, 1),
+    60px 100px 0 18px rgba(255, 215, 100, 0.65),
+    60px 100px 0 27px rgba(255, 215, 100, 0.25),
 
-    340px 110px 0 8px rgba(244, 192, 122, 1),
-    340px 110px 0 16px rgba(244, 192, 122, 0.6),
+    420px 115px 0 10px rgba(255, 190, 85, 1),
+    420px 115px 0 20px rgba(255, 190, 85, 0.7),
 
-    580px 95px 0 9px rgba(255, 215, 100, 1),
-    580px 95px 0 18px rgba(255, 215, 100, 0.6),
-    580px 95px 0 27px rgba(255, 215, 100, 0.2),
+    650px 105px 0 11px rgba(255, 200, 80, 1),
+    650px 105px 0 22px rgba(255, 200, 80, 0.7),
+    650px 105px 0 33px rgba(255, 200, 80, 0.3),
 
-    800px 105px 0 7px rgba(232, 168, 124, 0.95),
-    800px 105px 0 14px rgba(232, 168, 124, 0.5),
+    900px 120px 0 9px rgba(255, 180, 90, 1),
+    900px 120px 0 18px rgba(255, 180, 90, 0.65),
 
-    1000px 85px 0 8px rgba(249, 214, 127, 1),
-    1000px 85px 0 16px rgba(249, 214, 127, 0.6),
+    1150px 95px 0 10px rgba(255, 215, 100, 1),
+    1150px 95px 0 20px rgba(255, 215, 100, 0.7),
 
     /* Row 3 - Middle scattered */
-    80px 160px 0 8px rgba(244, 192, 122, 1),
-    80px 160px 0 16px rgba(244, 192, 122, 0.6),
-    80px 160px 0 24px rgba(244, 192, 122, 0.2),
+    200px 180px 0 10px rgba(255, 200, 80, 1),
+    200px 180px 0 20px rgba(255, 200, 80, 0.7),
+    200px 180px 0 30px rgba(255, 200, 80, 0.3),
 
-    290px 175px 0 9px rgba(255, 215, 100, 1),
-    290px 175px 0 18px rgba(255, 215, 100, 0.6),
-    290px 175px 0 27px rgba(255, 215, 100, 0.2),
+    480px 190px 0 11px rgba(255, 180, 90, 1),
+    480px 190px 0 22px rgba(255, 180, 90, 0.7),
+    480px 190px 0 33px rgba(255, 180, 90, 0.3),
 
-    510px 165px 0 7px rgba(249, 214, 127, 0.95),
-    510px 165px 0 14px rgba(249, 214, 127, 0.5),
+    720px 175px 0 9px rgba(255, 215, 100, 1),
+    720px 175px 0 18px rgba(255, 215, 100, 0.65),
 
-    740px 180px 0 8px rgba(232, 168, 124, 1),
-    740px 180px 0 16px rgba(232, 168, 124, 0.6),
-
-    950px 155px 0 9px rgba(255, 215, 100, 1),
-    950px 155px 0 18px rgba(255, 215, 100, 0.6),
-    950px 155px 0 27px rgba(255, 215, 100, 0.2),
+    1050px 185px 0 10px rgba(255, 190, 85, 1),
+    1050px 185px 0 20px rgba(255, 190, 85, 0.7),
+    1050px 185px 0 30px rgba(255, 190, 85, 0.3),
 
     /* Row 4 - Lower scattered */
-    160px 240px 0 7px rgba(249, 214, 127, 0.95),
-    160px 240px 0 14px rgba(249, 214, 127, 0.5),
+    350px 260px 0 9px rgba(255, 215, 100, 1),
+    350px 260px 0 18px rgba(255, 215, 100, 0.65),
 
-    400px 250px 0 8px rgba(244, 192, 122, 1),
-    400px 250px 0 16px rgba(244, 192, 122, 0.6),
+    580px 250px 0 10px rgba(255, 200, 80, 1),
+    580px 250px 0 20px rgba(255, 200, 80, 0.7),
 
-    630px 235px 0 9px rgba(255, 215, 100, 1),
-    630px 235px 0 18px rgba(255, 215, 100, 0.6),
-    630px 235px 0 27px rgba(255, 215, 100, 0.2),
+    850px 265px 0 11px rgba(255, 180, 90, 1),
+    850px 265px 0 22px rgba(255, 180, 90, 0.7),
+    850px 265px 0 33px rgba(255, 180, 90, 0.3),
 
-    870px 245px 0 7px rgba(232, 168, 124, 0.95),
-    870px 245px 0 14px rgba(232, 168, 124, 0.5);
-  filter: blur(2px);
+    1180px 245px 0 9px rgba(255, 190, 85, 1),
+    1180px 245px 0 18px rgba(255, 190, 85, 0.65);
+  filter: blur(1.5px);
   animation: warmStarTwinkle 3s ease-in-out infinite;
 }
 
@@ -262,17 +263,17 @@ const onSplineLoaded = () => {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
-    filter: blur(2px) brightness(1);
+    filter: blur(1.5px) brightness(1.2);
   }
   33% {
-    opacity: 0.5;
-    transform: scale(0.9);
-    filter: blur(2.5px) brightness(1.3);
+    opacity: 0.7;
+    transform: scale(0.95);
+    filter: blur(2px) brightness(1.5);
   }
   66% {
-    opacity: 0.8;
+    opacity: 0.9;
     transform: scale(1.05);
-    filter: blur(1.5px) brightness(0.9);
+    filter: blur(1.2px) brightness(1.1);
   }
 }
 

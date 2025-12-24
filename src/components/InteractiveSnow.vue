@@ -77,6 +77,9 @@ const greetingX = ref(0)
 const greetingY = ref(0)
 let greetingTimeout = null
 
+// Sound effect
+const bellsSound = ref(null)
+
 // 20 different greeting messages
 const greetings = [
   'Merry Christmas~ Ho~ Ho~ Ho~',
@@ -171,6 +174,12 @@ const startGathering = (x, y) => {
   lastPressY.value = y
   motionVelocityX.value = 0
   motionVelocityY.value = 0
+
+  // Play bells sound effect
+  if (bellsSound.value) {
+    bellsSound.value.currentTime = 0
+    bellsSound.value.play().catch(err => console.log('Audio play failed:', err))
+  }
 
   // Store original positions and stop falling
   snowParticles.value.forEach(particle => {
@@ -268,6 +277,13 @@ const scatterSnow = (x, y) => {
   isPressed.value = false
   clearInterval(gatherInterval.value)
 
+  // Stop bells sound after 0.3s
+  setTimeout(() => {
+    if (bellsSound.value) {
+      bellsSound.value.pause()
+    }
+  }, 300)
+
   // Show greeting message
   showRandomGreeting(x, y)
 
@@ -323,6 +339,12 @@ const scatterSnow = (x, y) => {
 
 // Mouse events (desktop)
 const handleMouseDown = (e) => {
+  // Ignore clicks on music controller, present button, and dialog
+  if (e.target.closest('.music-player') ||
+      e.target.closest('.present-container') ||
+      e.target.closest('.dialog-overlay')) {
+    return
+  }
   startGathering(e.clientX, e.clientY)
 }
 
@@ -343,6 +365,12 @@ const handleMouseUp = (e) => {
 
 // Touch events (mobile)
 const handleTouchStart = (e) => {
+  // Ignore touches on music controller, present button, and dialog
+  if (e.target.closest('.music-player') ||
+      e.target.closest('.present-container') ||
+      e.target.closest('.dialog-overlay')) {
+    return
+  }
   e.preventDefault()
   const touch = e.touches[0]
   startGathering(touch.clientX, touch.clientY)
@@ -367,6 +395,10 @@ const handleTouchEnd = (e) => {
 
 onMounted(() => {
   initSnowParticles()
+
+  // Initialize bells sound effect
+  bellsSound.value = new Audio('/audio/sound-effect/bells-sound-effect-press-hold.mp3')
+  bellsSound.value.volume = 0.6
 
   // Add event listeners
   window.addEventListener('mousedown', handleMouseDown)

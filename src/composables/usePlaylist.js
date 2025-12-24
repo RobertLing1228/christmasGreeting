@@ -12,6 +12,7 @@ export function usePlaylist() {
   const error = ref(null)
   const currentTime = ref(0)
   const duration = ref(0)
+  const volume = ref(0.2) // Start at 20%
 
   // Get current song info
   const currentSong = computed(() => playlist.value[currentIndex.value])
@@ -25,7 +26,7 @@ export function usePlaylist() {
     }
 
     audio.value = new Audio(currentSongPath.value)
-    audio.value.volume = 0.3 // 30% volume
+    audio.value.volume = volume.value
 
     // Event listeners
     audio.value.addEventListener('error', (e) => {
@@ -112,8 +113,10 @@ export function usePlaylist() {
 
   // Set volume
   const setVolume = (vol) => {
+    const newVolume = Math.max(0, Math.min(1, vol))
+    volume.value = newVolume
     if (audio.value) {
-      audio.value.volume = Math.max(0, Math.min(1, vol))
+      audio.value.volume = newVolume
     }
   }
 
@@ -134,6 +137,7 @@ export function usePlaylist() {
     error,
     currentTime,
     duration,
+    volume,
 
     // Methods
     play,

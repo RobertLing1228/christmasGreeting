@@ -27,6 +27,20 @@
       ⏭
     </button>
 
+    <div class="volume-control">
+      <span class="volume-icon">🔊</span>
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        :value="volume"
+        @input="handleVolumeChange"
+        class="volume-slider"
+        aria-label="Volume control"
+      />
+    </div>
+
     <div class="song-info">
       <span class="song-title">
         <span
@@ -51,11 +65,18 @@ const {
   isPlaying,
   currentTime,
   duration,
+  volume,
   togglePlay,
   playNext,
   playPrevious,
-  play
+  play,
+  setVolume
 } = usePlaylist()
+
+// Handle volume change
+const handleVolumeChange = (e) => {
+  setVolume(parseFloat(e.target.value))
+}
 
 // Format time in MM:SS
 const formatTime = (seconds) => {
@@ -142,6 +163,65 @@ onMounted(async () => {
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+}
+
+.volume-icon {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.volume-slider {
+  width: 60px;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.volume-slider:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ffd700;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ffd700;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+.volume-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
 .song-info {
   margin-left: 0.5rem;
   padding-left: 0.75rem;
@@ -203,6 +283,19 @@ onMounted(async () => {
     margin-left: 0.3rem;
     padding-left: 0.5rem;
   }
+
+  .volume-control {
+    gap: 0.3rem;
+    margin-left: 0.3rem;
+  }
+
+  .volume-slider {
+    width: 50px;
+  }
+
+  .volume-icon {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -223,6 +316,19 @@ onMounted(async () => {
   .song-title {
     font-size: 0.7rem;
     max-width: 100px;
+  }
+
+  .volume-control {
+    gap: 0.2rem;
+    margin-left: 0.2rem;
+  }
+
+  .volume-slider {
+    width: 40px;
+  }
+
+  .volume-icon {
+    font-size: 0.8rem;
   }
 }
 </style>

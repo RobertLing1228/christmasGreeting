@@ -9,16 +9,20 @@ format: text
 
 # Merry Christmas & Happy New Year
 
-**To:** Teresa
+**To:** Teresa Teng
 
-Wishing you a joyful Christmas🎄 filled with warmth, peace, and bright moments ✨
+Hey~ Wishing you a joyful Christmas🎄 filled with<br> warmth, peace, and bright moments ✨
+I guess I can make this year's Christmas a bit more special for you.
 <br>
 <br>
-May the season bring you happiness, good health, and precious time with loved ones 🎁❤️
+May the upcoming year 2026 bring you happiness, good health, and precious time with loved ones ❤️.
+This year found you have many great memories to keep,<br> so I also want to make this special, so you can remember this one.
 <br>
 <br>
-Cheers to a bright New Year ahead 🥂🌟!
+Cheers to a bright New Year ahead 🥂!<br> Wish you the best!
 <br>
+<br>
+From Robert.
+
 ---
 *December 25, 2025*
-![1766508602118](image/teresa/1766508602118.png)
